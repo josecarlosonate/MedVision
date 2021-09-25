@@ -16,9 +16,10 @@
     <title>MEDVISION</title>
 
     <!--=====================================
-	HOJA DE CSS 
+	HOJA DE CSS y JS
 	======================================-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="vistas/css/plugins/bootstrap4.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -44,8 +45,8 @@
             <div class="card-body">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Personas</a>
-                        <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Casas</a>
+                        <a class="nav-link active tab" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Personas</a>
+                        <a class="nav-link tab" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Casas</a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
@@ -73,7 +74,7 @@
                                         <div class="card-body">
                                             <div class="card-body">
                                                 <h5 class="card-title nombrePersona" id="nom<?php echo $key ?>"><?php echo $value['fisrstName'] . ' ' . $value["lastName"] ?></h5>
-                                                <div class="" id="caja<?php echo $key ?>">
+                                                <div class="ocultar" id="caja<?php echo $key ?>">
                                                     <ul>
                                                         <li>Cumpleaños: <?php echo date("d/m/Y", strtotime($value['birthDate']))  ?></li>
                                                         <li>Casado: <?php echo $value['isMarried'] == true ? 'Si' : 'No' ?></li>

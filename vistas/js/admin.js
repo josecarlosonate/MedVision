@@ -1,11 +1,13 @@
 $(document).ready(function() {
     //recorrer img y nombre
     $('.imgPersona, .nombrePersona').on('click', function() {
-        mostrarInfo();
+        mostrarInfo($(this).attr('id'));
     });
 
 });
 
-function mostrarInfo() {
-
+//mostar mas info de la persona ala dar click
+function mostrarInfo(id) {
+    let num = id.slice(-1);
+    $('#caja' + num).toggle(1100);
 }
