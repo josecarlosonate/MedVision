@@ -18,11 +18,11 @@
     <!--=====================================
 	HOJA DE CSS y JS
 	======================================-->
-    
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="vistas/css/plugins/bootstrap4.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="vistas/css/estilo.css">
 
 
@@ -62,6 +62,19 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class=" col-md-6 mt-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group">Id de Persona: &nbsp;</span>
+                                    </div>
+                                    <input type="number" name="idPer" id="idPer" class="form-control" placeholder="ingrese un numero" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-secondary" id="btnBuscar">Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row cajaInfo">
                             <?php
                             //traer personas
                             $personas = ControladorPersonas::ctrMostrarPersonas();
@@ -139,7 +152,7 @@
                                 <span class="input-group-text">Fecha Cumpleaños <b class="text-danger"> *</b></span>
                             </div>&nbsp;&nbsp;
                             <input type="date" name="fecha" class="form-control" aria-describedby="basic-addon1" id="fecha">
-                        </div>                      
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" id="btnGuardar" class="btn btn-primary">Guardar</button>

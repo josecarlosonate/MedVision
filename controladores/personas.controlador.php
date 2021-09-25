@@ -17,6 +17,18 @@ class ControladorPersonas{
 	}
 
 	/*=============================================
+	BUSCAR PERSONA
+	=============================================*/
+
+	static public function ctrBuscarPersona($id){
+
+		$url= "http://hiring.medvision.com.co/api/Person/GetPersonById/";
+
+		return ModeloPersonas::mdlBuscarPersona($url,$id);
+
+	}
+
+	/*=============================================
 	GUARDAR PERSONA
 	=============================================*/
 
