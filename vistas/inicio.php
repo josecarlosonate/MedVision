@@ -130,11 +130,29 @@
                     <div class="modal-body">
                         <h6 class="text-danger">los campos marcados con * son obligatorios</h6>
                         <!-- nombre  -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Nombre <b class="text-danger"> *</b></span>
+                                    </div>
+                                    <input type="text" id="nombre" name="nombre" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- apellido  -->
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">Nombre completo <b class="text-danger"> *</b></span>
+                                <span class="input-group-text">Apellido <b class="text-danger"> *</b></span>
                             </div>
-                            <input type="text" id="nombre" name="nombre" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" id="apellido" name="apellido" class="form-control" aria-describedby="basic-addon1">
+                        </div>
+                        <!-- documento  -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">N. Documento <b class="text-danger"> *</b></span>
+                            </div>
+                            <input type="text" id="doc" name="doc" class="form-control" aria-describedby="basic-addon1">
                         </div>
                         <!-- casado  -->
                         <div class="input-group mb-3">
@@ -150,12 +168,27 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Fecha Cumpleaños <b class="text-danger"> *</b></span>
-                            </div>&nbsp;&nbsp;
+                            </div>
                             <input type="date" name="fecha" class="form-control" aria-describedby="basic-addon1" id="fecha">
+                        </div>
+                        <p class="text-success">Detalles de residencia</p>
+                        <!-- descripcion  -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Description <b class="text-danger"> *</b></span>
+                            </div>
+                            <input type="text" name="descri" class="form-control" aria-describedby="basic-addon1" id="descri">
+                        </div>
+                        <!-- direccion  -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Direccion <b class="text-danger"> *</b></span>
+                            </div>
+                            <input type="text" name="direccion" class="form-control" aria-describedby="basic-addon1" id="direccion">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="btnGuardar" class="btn btn-primary">Guardar</button>
+                        <button type="submit" id="btnGuardar" name="guardar" class="btn btn-primary">Guardar</button>
                     </div>
                 </form>
             </div>

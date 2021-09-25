@@ -83,3 +83,29 @@ function buscarPersona() {
 
 
 }
+
+// validar formulario
+// mensajes español
+$(document).ready(function() {
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Este campo {} es obligatorio.",
+        email: "Por favor, escribe una dirección de correo válida",
+        number: "Por favor, escribe un número entero válido.",
+        maxlength: jQuery.validator.format(
+            "Por favor, no escribas más de {0} caracteres."
+        ),
+        minlength: jQuery.validator.format(
+            "Por favor, no escribas menos de {0} caracteres."
+        ),
+    });
+});
+$("#formularioRegistro").validate({
+    rules: {
+        nombre: {
+            required: true
+        },
+        apellido: {
+            required: true
+        }
+    }
+});

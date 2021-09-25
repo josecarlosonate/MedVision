@@ -25,4 +25,9 @@ if(isset($_POST["accion"])){
 		$persona = new AjaxPersonas();
 		$persona->ajaxConsultarPersona($_POST["id"]);
 	}
+
+	//guardar nueva persona
+	if($_POST["accion"] == 'guardar'){
+		print_r($_POST);
+	}
 }
