@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDEDED;
+}
+
+.centrar {
+    margin: 0 auto;
+    max-width: 40%;
+}
+
+.centrar img {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.centrar h2 {
+    margin-bottom: 20px;
+}
+
+.centrar a {
+    display: block;
+}
+
+.modal h6 {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.iconoEditar i,
+.iconoVer i,
+.iconoBorrar i {
+    cursor: pointer;
+}
+
+.iconoEditar i {
+    color: #FFCD07;
+}
+
+.iconoVer i {
+    color: green;
+}
+
+.iconoBorrar i {
+    color: red;
+}
+
+.input-group-prepend {
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.custom-switch {
+    padding-left: 2.25rem;
+}
+
+ul.list-group {
+    margin-bottom: 4px;
+}
+
+.ocultar {
+    display: none;
+}
+
+h5.card-title {
+    transition: all 0.5s ease-out;
+}
+
+h5.card-title:hover {
+    cursor: pointer;
+    color: #00BFA5;
+    padding-left: 15px;
+    font-size: 1.4rem;
+}
+
+img.card-img-top {
+    cursor: pointer;
+}
