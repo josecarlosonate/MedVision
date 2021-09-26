@@ -32,11 +32,11 @@ class ControladorPersonas{
 	GUARDAR PERSONA
 	=============================================*/
 
-	static public function ctrGuardarPersona(){
+	static public function ctrGuardarPersona($datos){
 
-		$url= "http://hiring.medvision.com.co/api/";
-
-		return ModeloPersonas::mdlGuardarPersona($url);		
+		$url= "http://hiring.medvision.com.co/api/Person/AddPerson";
+		
+		return ModeloPersonas::mdlGuardarPersona($url,$datos);		
 
 	}
 

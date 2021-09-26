@@ -88,8 +88,7 @@ function buscarPersona() {
 // mensajes español
 $(document).ready(function() {
     jQuery.extend(jQuery.validator.messages, {
-        required: "Este campo {} es obligatorio.",
-        email: "Por favor, escribe una dirección de correo válida",
+        required: "Este campo  es obligatorio.",
         number: "Por favor, escribe un número entero válido.",
         maxlength: jQuery.validator.format(
             "Por favor, no escribas más de {0} caracteres."
@@ -102,10 +101,79 @@ $(document).ready(function() {
 $("#formularioRegistro").validate({
     rules: {
         nombre: {
-            required: true
+            required: true,
+            minlength: 3,
         },
         apellido: {
             required: true
+        },
+        doc: {
+            required: true,
+            number: true
+        },
+        casado: {
+            required: true
+        },
+        fecha: {
+            required: true
+        },
+        descri: {
+            required: true,
+            minlength: 3,
+            maxlength: 20
+        },
+        direccion: {
+            required: true,
+            minlength: 4,
         }
     }
 });
+
+// guardar datos de persona
+$("#btnGuardar").click(function() {
+    if ($("#formularioRegistro").valid() === false) {
+        return;
+    }
+    //datos
+    let nombre = $("#nombre").val();
+    let apellido = $("#apellido").val();
+    let doc = $("#doc").val();
+    let casado = $("#casado").val();
+    let fecha = $("#fecha").val();
+    let descri = $("#descri").val();
+    let direccion = $("#direccion").val();
+
+    // objeto de datos
+    let objDatos = {
+        document: doc,
+        fisrstName: nombre,
+        lastName: apellido,
+        birthDate: fecha,
+        isMarried: casado == 1 ? true : false,
+        height: 0,
+        description: descri,
+        address: direccion,
+        ownerID: 0,
+        owner: 'No',
+    };
+
+
+    enviarAjax(JSON.stringify(objDatos));
+
+    //enviar por ajax para guardar
+    function enviarAjax(datos) {
+        $.ajax({
+            async: true,
+            url: "ajax/personas.ajax.php",
+            type: "POST",
+            data: {
+                accion: "nuevo",
+                persona: datos,
+            },
+            success: function(response) {
+                console.log(response);
+            }
+        });
+    }
+
+})

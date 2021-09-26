@@ -136,7 +136,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">Nombre <b class="text-danger"> *</b></span>
                                     </div>
-                                    <input type="text" id="nombre" name="nombre" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                                    <input type="text" id="nombre" name="nombre" style="width: 70%;" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
                                 </div>
                             </div>
                         </div>
@@ -145,23 +145,23 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Apellido <b class="text-danger"> *</b></span>
                             </div>
-                            <input type="text" id="apellido" name="apellido" class="form-control" aria-describedby="basic-addon1">
+                            <input type="text" id="apellido" name="apellido" style="width: 70%;" class="form-control" aria-describedby="basic-addon1">
                         </div>
                         <!-- documento  -->
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">N. Documento <b class="text-danger"> *</b></span>
                             </div>
-                            <input type="text" id="doc" name="doc" class="form-control" aria-describedby="basic-addon1">
+                            <input type="text" id="doc" name="doc" style="min-width: 60%;" class="form-control" aria-describedby="basic-addon1">
                         </div>
                         <!-- casado  -->
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">¿Casado? <b class="text-danger"> *</b></span>
                             </div>
-                            <select name="casado" id="casado" class="form-control" aria-describedby="basic-addon1">
+                            <select name="casado" id="casado" class="form-control" style="min-width: 60%;" aria-describedby="basic-addon1">
                                 <option value="1">Si</option>
-                                <option value="1">No</option>
+                                <option value="0">No</option>
                             </select>
                         </div>
                         <!-- cumpleaños  -->
@@ -169,7 +169,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Fecha Cumpleaños <b class="text-danger"> *</b></span>
                             </div>
-                            <input type="date" name="fecha" class="form-control" aria-describedby="basic-addon1" id="fecha">
+                            <input type="date" name="fecha" style="min-width: 60%;" class="form-control" aria-describedby="basic-addon1" id="fecha">
                         </div>
                         <p class="text-success">Detalles de residencia</p>
                         <!-- descripcion  -->
@@ -177,14 +177,14 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Description <b class="text-danger"> *</b></span>
                             </div>
-                            <input type="text" name="descri" class="form-control" aria-describedby="basic-addon1" id="descri">
+                            <input type="text" name="descri" style="min-width: 60%;" class="form-control" aria-describedby="basic-addon1" id="descri">
                         </div>
                         <!-- direccion  -->
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Direccion <b class="text-danger"> *</b></span>
                             </div>
-                            <input type="text" name="direccion" class="form-control" aria-describedby="basic-addon1" id="direccion">
+                            <input type="text" name="direccion" style="min-width: 60%;" class="form-control" aria-describedby="basic-addon1" id="direccion">
                         </div>
                     </div>
                     <div class="modal-footer">

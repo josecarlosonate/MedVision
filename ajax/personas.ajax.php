@@ -5,6 +5,7 @@ require_once "../modelos/personas.modelo.php";
 
 class AjaxPersonas{
 
+	public $datosPersona;
     /*=============================================
 	CONSULTAR PERSONA
 	=============================================*/
@@ -15,6 +16,17 @@ class AjaxPersonas{
 
 		echo $respuesta;
     }
+
+	/*=============================================
+	AGREGAR PERSONA
+	=============================================*/
+	public function ajaxGuardarPersona(){
+		$datos = $this->datosPersona;
+		
+		$respuesta = ControladorPersonas::ctrGuardarPersona($datos);
+
+		return $respuesta;
+	}
 
 }
 
@@ -27,7 +39,12 @@ if(isset($_POST["accion"])){
 	}
 
 	//guardar nueva persona
-	if($_POST["accion"] == 'guardar'){
-		print_r($_POST);
+	if($_POST["accion"] == 'nuevo'){
+		$persona = new AjaxPersonas();
+		$personadata = json_decode($_POST['persona'],true);
+		
+		$persona->datosPersona = $personadata;
+		$persona->ajaxGuardarPersona();
 	}
+
 }
